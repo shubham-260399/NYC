@@ -1,0 +1,19 @@
+<script>
+    //promise has three states
+    var record=new Promise((res,rej)=>{
+        //promise 
+        console.log(typeof res,typeof rej);
+        rej("Task is completed")
+        
+
+    })
+    console.log(record);
+    // then is handler for resolved values..
+    record.then((value)=>{
+        console.log(value);
+    }).catch((error)=>{
+        console.log(error);
+    }).finally(()=>{
+        console.log("Go for next task");
+    })
+</script>
